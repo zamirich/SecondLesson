@@ -25,6 +25,21 @@ isEven(number: 1001)
 
 
 //2. Написать функцию, которая определяет, делится ли число без остатка на 3.
+
+func isDividibleByThree(number: Int) {
+    if number % 3 == 0 {
+        print("Number \(number) can be divided by 3 without remainder")
+    } else {
+        print("Number \(number) cannotbe divided by 3 without remainder")
+    }
+}
+
+//checking the result
+isDividibleByThree(number: 0)
+isDividibleByThree(number: -25)
+isDividibleByThree(number: 189)
+
+
 //3. Создать возрастающий массив из 100 чисел.
 //4. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
 //5. * Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 100 элементов.
