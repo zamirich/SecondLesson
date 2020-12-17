@@ -22,7 +22,7 @@ func isEven(number: Int) {
 isEven(number: 0)
 isEven(number: 202)
 isEven(number: 1001)
-
+print("\n")
 
 //2. Написать функцию, которая определяет, делится ли число без остатка на 3.
 
@@ -38,9 +38,21 @@ func isDividibleByThree(number: Int) {
 isDividibleByThree(number: 0)
 isDividibleByThree(number: -25)
 isDividibleByThree(number: 189)
+print("\n")
 
 
 //3. Создать возрастающий массив из 100 чисел.
+
+var myNewArray = [0]
+var startingElement = 6
+
+while myNewArray.count < 100 {
+    myNewArray.append(startingElement)
+    startingElement += 7
+}
+
+print("We have created an incrementing array with an increment of 6: \(myNewArray)\n")
+
 //4. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
 //5. * Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 100 элементов.
 //Числа Фибоначчи определяются соотношениями Fn=Fn-1 + Fn-2.
