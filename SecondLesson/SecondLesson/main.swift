@@ -54,6 +54,16 @@ while myNewArray.count < 100 {
 print("We have created an incrementing array with an increment of 6: \(myNewArray)\n")
 
 //4. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
+
+for number in myNewArray {
+    if number % 2 == 0 || number % 3 != 0 {
+        myNewArray.remove(at: myNewArray.index(of: number)!)
+    }
+}
+
+print("This is what is left of my array after deleting even numbers and numbers that can't be divided by 3: \(myNewArray)\n")
+
+
 //5. * Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 100 элементов.
 //Числа Фибоначчи определяются соотношениями Fn=Fn-1 + Fn-2.
 
