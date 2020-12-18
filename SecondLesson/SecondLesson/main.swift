@@ -67,6 +67,20 @@ print("This is what is left of my array after deleting even numbers and numbers 
 //5. * Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 100 элементов.
 //Числа Фибоначчи определяются соотношениями Fn=Fn-1 + Fn-2.
 
+var existingFibonachchiArray: [Double] = [0, 1, 1, 2, 3] //задаем уже существующий массив, чтобы функция сама определила в каком мы месте и какое число нужно добавить
+
+func addNewFibonachchiNumber(to array: [Double]) {
+    let nextFibonachchiNumber = array[array.count - 1] + array[array.count - 2] //создаем константу и присваем ей сумму последнего и предпоследнего элементов массива
+    existingFibonachchiArray.append(nextFibonachchiNumber)
+}
+
+for _ in 1...100 {
+    addNewFibonachchiNumber(to: existingFibonachchiArray)
+}
+
+print("\(existingFibonachchiArray)\n") //проверяем результат
+
+
 //6. * Заполнить массив из 100 элементов различными простыми числами. Натуральное число, большее единицы, называется простым, если оно делится только на себя и на единицу. Для нахождения всех простых чисел не больше заданного числа n, следуя методу Эратосфена, нужно выполнить следующие шаги:
 //a. Выписать подряд все целые числа от двух до n (2, 3, 4, ..., n).
 //b. Пусть переменная p изначально равна двум — первому простому числу.
