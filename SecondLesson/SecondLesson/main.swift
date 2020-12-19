@@ -82,9 +82,27 @@ print("\(existingFibonachchiArray)\n") //проверяем результат
 
 
 //6. * Заполнить массив из 100 элементов различными простыми числами. Натуральное число, большее единицы, называется простым, если оно делится только на себя и на единицу. Для нахождения всех простых чисел не больше заданного числа n, следуя методу Эратосфена, нужно выполнить следующие шаги:
+
+var p = 2
+var fullArray = Array(p...1000) //this array is just for calculations
+var newArray = [2] //this array will be used for generating 100 simple numbers
+
+while fullArray.index(of: p)! < 99 {
+    for i in fullArray {
+        if i != p && i % p == 0 {
+            fullArray.remove(at: fullArray.index(of: i)!)
+        }
+    }
+    p = fullArray[fullArray.index(after: fullArray.index(of: p)!)]
+    newArray.append(p)
+}
+
+print("Our new array consists of \(newArray.count) simple numbers: \(newArray)")
+
 //a. Выписать подряд все целые числа от двух до n (2, 3, 4, ..., n).
 //b. Пусть переменная p изначально равна двум — первому простому числу.
 //c. Зачеркнуть в списке числа от 2 + p до n, считая шагом p..
+    //why 2 + p? should be 2 * p
 //d. Найти первое не зачёркнутое число в списке, большее, чем p, и присвоить значению переменной p это число.
 //e. Повторять шаги c и d, пока возможно.
 
